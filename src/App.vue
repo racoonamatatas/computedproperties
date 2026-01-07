@@ -5,7 +5,7 @@
 </template>
 
 <script setup>
-import {ref} from 'vue';
+import {ref, computed} from 'vue';
 
 const people = ref([
     {name: 'Jan', age: 12},
@@ -23,4 +23,7 @@ const addPerson = () => {
     newName.value = '';
     newAge.value = null;
 };
+
+// Computed array of children in the people array.
+const children = computed(() => people.value.filter(person => person.age < 18));
 </script>
