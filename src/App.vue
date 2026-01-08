@@ -16,6 +16,8 @@
         Adults:
         <li v-for="(adult, index) in adults" :key="index">{{ adult.name }} {{ adult.age }}</li>
     </ul>
+    <p>Total number of people: {{ totalPeople }}</p>
+    <p>Total number of children: {{ numberOfChildren }}</p>
 </template>
 
 <script setup>
@@ -47,4 +49,8 @@ const children = computed(() => people.value.filter(person => !isAdult(person)))
 
 // Computed array of adults in the people array.
 const adults = computed(() => people.value.filter(isAdult));
+
+const totalPeople = computed(() => people.value.length);
+
+const numberOfChildren = computed(() => children.value.length);
 </script>
