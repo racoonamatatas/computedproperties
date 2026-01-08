@@ -6,11 +6,11 @@
     <ul>
         People:
         <br />
-        <li v-for="person in people" :key="person.name">{{ person.name }} {{ person.age }}</li>
+        <li v-for="(person, index) in people" :key="index">{{ person.name }} {{ person.age }}</li>
     </ul>
     <ul>
         Children:
-        <li v-for="child in children" :key="child.name">{{ child.name }} {{ child.age }}</li>
+        <li v-for="(child, index) in children" :key="index">{{ child.name }} {{ child.age }}</li>
     </ul>
 </template>
 
