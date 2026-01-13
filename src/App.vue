@@ -28,8 +28,8 @@ const people = ref([
     {name: 'Piet', age: 20},
 ]);
 
-let newName = ref('');
-let newAge = ref();
+const newName = ref('');
+const newAge = ref();
 
 // Adds a new person to the reactive people array.
 const addPerson = () => {
